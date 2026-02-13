@@ -1,0 +1,71 @@
+{
+  "students": [],
+  "courses": [
+    {
+      "id": "1",
+      "name": "Mathematics",
+      "level": "Beginner",
+      "instructorId": 1
+    },
+    {
+      "id": "2",
+      "name": "Physics",
+      "level": "Intermediate",
+      "instructorId": 2
+    },
+    {
+      "id": "3",
+      "name": "Chemistry",
+      "level": "Beginner",
+      "instructorId": 3
+    },
+    {
+      "id": "4",
+      "name": "Biology",
+      "level": "Beginner",
+      "instructorId": 4
+    },
+    {
+      "id": "5",
+      "name": "Computer Science",
+      "level": "Advanced",
+      "instructorId": 3
+    }
+  ],
+  "instructors": [
+    {
+      "id": "1",
+      "name": "Dr. Ahmed Ali",
+      "email": "ahmed.ali@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Mona Hassan",
+      "email": "mona.hassan@example.com"
+    },
+    {
+      "id": "3",
+      "name": "Dr. Tamer Youssef",
+      "email": "tamer.youssef@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Dr. Sara Khaled",
+      "email": "sara.khaled@example.com"
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "Hossam Sami",
+      "role": "Student Affairs Staff",
+      "email": "hossam@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Rania Adel",
+      "role": "Student Affairs Staff",
+      "email": "rania@example.com"
+    }
+  ]
+}
