@@ -1,155 +1,157 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    padding: 20px;
-    background-color: #f5f5f5;
-    color: #333;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .data-select,
 .data-search input {
-    padding: 5px 10px;
-    font-size: 14px;
-    margin: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin: 10px;
 }
 
 .data-search {
-    float: right;
+  float: right;
 }
 
 #studentsTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #studentsTable th,
 #studentsTable td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 #studentsTable th {
-    background-color: #007BFF;
-    color: #fff;
-    font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
 }
 
 #studentsTable tr:nth-child(even) {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 #studentsTable tr:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 button {
-    padding: 5px 10px;
-    margin: 0 2px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: 0.2s;
+  padding: 5px 10px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
 }
 
 button:hover {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
-.btn-edit {
-    background-color: #28a745;
-    color: white;
+.edit-btn {
+  background-color: #28a745;
+  color: white;
 }
 
-.btn-delete {
-    background-color: #dc3545;
-    color: white;
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
 }
 
 #addStudentBtn {
-    background-color: #007BFF;
-    color: white;
-    margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .pagination {
-    margin-top: 10px;
-    text-align: right;
+  margin-top: 10px;
+  text-align: right;
 }
 
 .btn-Previous,
 .btn-Next {
-    background-color: #fff;
-    color: #007BFF;
-    border: 1px solid #007BFF;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
+  background-color: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 .btn-Previous:hover,
 .btn-Next:hover {
-    background-color: #007BFF;
-    color: #fff;
+  background-color: #007bff;
+  color: #fff;
 }
 
 #studentFormModal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    z-index: 1000;
-    display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  z-index: 1000;
+  display: none;
+  width: 400px;
 }
 
 #studentFormModal h3 {
-    margin-bottom: 15px;
-    text-align: center;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 #studentFormModal label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 #studentFormModal input {
-    width: 100%;
-    padding: 7px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 7px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 #studentFormModal button {
-    margin-top: 15px;
-    width: 48%;
+  margin-top: 15px;
+  width: 48%;
 }
 
 #studentFormModal #cancelBtn {
-    background-color: #6c757d;
-    color: #fff;
+  background-color: #6c757d;
+  color: #fff;
 }
 
 #studentFormModal #saveStudentBtn {
-    background-color: #28a745;
-    color: #fff;
+  background-color: #28a745;
+  color: #fff;
 }
+/* Courses checkboxes vertical, checkbox next to label */

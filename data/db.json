@@ -1,5 +1,44 @@
 {
-  "students": [],
+  "students": [
+    {
+      "name": "you",
+      "email": "ym526415@gmail.com",
+      "age": 15,
+      "courseIds": [
+        4
+      ],
+      "id": "35dd"
+    },
+    {
+      "id": "daf9",
+      "name": "kkepskp",
+      "email": "dmlm@mail.vom",
+      "age": 15,
+      "courseIds": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "a3e4",
+      "name": "youssef",
+      "email": "ym52641555@gmail.com",
+      "age": 18,
+      "courseIds": [
+        "2"
+      ]
+    },
+    {
+      "id": "3155",
+      "name": "Ali Mohamed",
+      "email": "mm@mao.com",
+      "age": 20,
+      "courseIds": [
+        "1"
+      ]
+    }
+  ],
   "courses": [
     {
       "id": "1",
