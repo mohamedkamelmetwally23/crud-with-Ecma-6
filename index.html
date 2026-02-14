@@ -1,51 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Students Affairs System</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Students Affairs System</h1>
 
-    <button id="addStudentBtn">Add Student</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Students Affairs System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <table id="studentsTable">
-      <thead>
-        <tr>
-          <th>Name <button id="sortNameBtn">⇅</button></th>
-          <th>Email</th>
-          <th>Age <button id="sortAgeBtn">⇅</button></th>
-          <th>Courses</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+<body>
+  <h1>Students Affairs System</h1>
 
-    <!-- Modal -->
-    <div id="studentFormModal">
-      <h3 id="formTitle">Add Student</h3>
+  <button id="addStudentBtn">Add Student</button>
+  <div class="data-search">
+    <input type="text" id="searchInput" placeholder="Search by name..." />
+  </div>
 
-      <input type="hidden" id="studentId" />
+  <table id="studentsTable">
+    <thead>
+      <tr>
+        <th>Name <button id="sortNameBtn">⇅</button></th>
+        <th>Email</th>
+        <th>Age <button id="sortAgeBtn">⇅</button></th>
+        <th>Courses</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
-      <label>Name:</label>
-      <input type="text" id="studentName" />
+  <!-- Modal -->
+  <div id="studentFormModal">
+    <h3 id="formTitle">Add Student</h3>
 
-      <label>Email:</label>
-      <input type="email" id="studentEmail" />
+    <input type="hidden" id="studentId" />
 
-      <label>Age:</label>
-      <input type="number" id="studentAge" />
+    <label>Name:</label>
+    <input type="text" id="studentName" />
 
-      <label>Courses:</label>
-      <div id="studentCourses"></div>
+    <label>Email:</label>
+    <input type="email" id="studentEmail" />
 
-      <button id="saveStudentBtn">Save</button>
-      <button id="cancelBtn">Cancel</button>
-    </div>
+    <label>Age:</label>
+    <input type="number" id="studentAge" />
 
-    <script type="module" src="./modules/app.js"></script>
-  </body>
+    <label>Courses:</label>
+    <div id="studentCourses"></div>
+
+    <button id="saveStudentBtn">Save</button>
+    <button id="cancelBtn">Cancel</button>
+  </div>
+  <div class="pagination">
+    <button id="prevBtn" class="btn-Previous">Previous</button>
+    <span id="pageInfo"></span>
+    <button id="nextBtn" class="btn-Next">Next</button>
+  </div>
+
+  <script type="module" src="./modules/app.js"></script>
+</body>
+
 </html>

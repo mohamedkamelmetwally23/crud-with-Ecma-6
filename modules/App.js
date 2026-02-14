@@ -17,16 +17,33 @@ const cancelBtn = document.getElementById("cancelBtn");
 const sortNameBtn = document.getElementById("sortNameBtn");
 const sortAgeBtn = document.getElementById("sortAgeBtn");
 
+const searchInput = document.getElementById("searchInput");
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const pageInfo = document.getElementById("pageInfo");
+
+// ===== Data =====
+let allStudents = [];
+let filteredStudents = [];
 let students = [];
 let courses = [];
 let courseMap = {};
+
 let nameSortAsc = true;
 let ageSortAsc = true;
+
+// Pagination
+let currentPage = 1;
+const pageSize = 10; // ✅ كل صفحة 10 طلاب
 
 // ===== Load data =====
 window.addEventListener("load", async () => {
   courses = await getData("courses");
-  students = await getData("students");
+  allStudents = await getData("students");
+
+  filteredStudents = [...allStudents];
+  students = [...filteredStudents];
 
   courses.forEach((c) => (courseMap[c.id] = c.name));
 
@@ -48,11 +65,15 @@ function fillCoursesCheckboxes() {
   });
 }
 
-// ===== Render table =====
+// ===== Render table with pagination =====
 function renderTable() {
   tableBody.innerHTML = "";
 
-  students.forEach((s) => {
+  const start = (currentPage - 1) * pageSize;
+  const end = start + pageSize;
+  const paginatedStudents = students.slice(start, end);
+
+  paginatedStudents.forEach((s) => {
     const courseNames =
       s.courseIds?.map((id) => courseMap[id]).join(", ") || "-";
 
@@ -69,7 +90,43 @@ function renderTable() {
     `;
     tableBody.appendChild(tr);
   });
+
+  renderPagination();
 }
+
+// ===== Pagination =====
+function renderPagination() {
+  const totalPages = Math.ceil(students.length / pageSize);
+  pageInfo.textContent = `Page ${currentPage} of ${totalPages || 1}`;
+  prevBtn.disabled = currentPage === 1;
+  nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+}
+
+prevBtn.addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    renderTable();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  const totalPages = Math.ceil(students.length / pageSize);
+  if (currentPage < totalPages) {
+    currentPage++;
+    renderTable();
+  }
+});
+
+// ===== Search =====
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+  filteredStudents = allStudents.filter((s) =>
+    s.name.toLowerCase().includes(value),
+  );
+  students = [...filteredStudents];
+  currentPage = 1;
+  renderTable();
+});
 
 // ===== Open form =====
 function openForm(student = null) {
@@ -120,7 +177,9 @@ tableBody.addEventListener("click", async (e) => {
   if (e.target.classList.contains("delete-btn")) {
     if (confirm("Delete this student?")) {
       await deleteData("students", id);
-      students = students.filter((s) => s.id != id);
+      allStudents = allStudents.filter((s) => s.id != id);
+      filteredStudents = [...allStudents];
+      students = [...filteredStudents];
       renderTable();
     }
   }
@@ -138,13 +197,13 @@ saveBtn.addEventListener("click", async () => {
     ...coursesDiv.querySelectorAll("input[type=checkbox]:checked"),
   ].map((cb) => cb.value);
 
-  // 🔴 Name validation
+  // Name validation
   if (!name || !isNaN(name)) {
     alert("Name is required and must be valid text");
     return;
   }
 
-  // 🔴 Email validation
+  // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email) {
     alert("Email is required");
@@ -155,20 +214,20 @@ saveBtn.addEventListener("click", async () => {
     return;
   }
 
-  // 🔴 Email unique
-  const duplicate = students.find((s) => s.email === email && s.id != id);
+  // Email unique
+  const duplicate = allStudents.find((s) => s.email === email && s.id != id);
   if (duplicate) {
     alert("Email already exists");
     return;
   }
 
-  // 🔴 Age validation
+  // Age validation
   if (!age || age < 15 || age > 30) {
     alert("Age must be between 15 and 30");
     return;
   }
 
-  // 🔴 Courses required
+  // Courses required
   if (!courseIds.length) {
     alert("Select at least one course");
     return;
@@ -178,13 +237,16 @@ saveBtn.addEventListener("click", async () => {
 
   if (id) {
     const updated = await putData("students", id, data);
-    students = students.map((s) => (s.id == id ? updated : s));
+    allStudents = allStudents.map((s) => (s.id == id ? updated : s));
   } else {
     const created = await postData("students", data);
-    students.push(created);
+    allStudents.push(created);
   }
 
+  filteredStudents = [...allStudents];
+  students = [...filteredStudents];
   modal.style.display = "none";
+  currentPage = 1;
   renderTable();
 });
 

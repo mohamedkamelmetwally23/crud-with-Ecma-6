@@ -1,41 +1,286 @@
 {
   "students": [
     {
-      "name": "you",
-      "email": "ym526415@gmail.com",
-      "age": 15,
-      "courseIds": [
-        4
-      ],
-      "id": "35dd"
-    },
-    {
-      "id": "daf9",
-      "name": "kkepskp",
-      "email": "dmlm@mail.vom",
-      "age": 15,
+      "id": "1",
+      "name": "Ahmed Ali",
+      "email": "ahmed.ali1@example.com",
+      "age": 18,
       "courseIds": [
         "1",
-        "2",
         "3"
       ]
     },
     {
-      "id": "a3e4",
-      "name": "youssef",
-      "email": "ym52641555@gmail.com",
-      "age": 18,
+      "id": "2",
+      "name": "Mona Hassan",
+      "email": "mona.hassan2@example.com",
+      "age": 20,
       "courseIds": [
         "2"
       ]
     },
     {
-      "id": "3155",
-      "name": "Ali Mohamed",
-      "email": "mm@mao.com",
-      "age": 20,
+      "id": "3",
+      "name": "Tamer Youssef",
+      "email": "tamer.youssef3@example.com",
+      "age": 22,
+      "courseIds": [
+        "2",
+        "5"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Sara Khaled",
+      "email": "sara.khaled4@example.com",
+      "age": 19,
+      "courseIds": [
+        "4"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Yara Samir",
+      "email": "yara.samir5@example.com",
+      "age": 21,
+      "courseIds": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Karim Mostafa",
+      "email": "karim.mostafa6@example.com",
+      "age": 24,
+      "courseIds": [
+        "5"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Nour Ahmed",
+      "email": "nour.ahmed7@example.com",
+      "age": 17,
+      "courseIds": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Omar Farouk",
+      "email": "omar.farouk8@example.com",
+      "age": 23,
       "courseIds": [
         "1"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Laila Mahmoud",
+      "email": "laila.mahmoud9@example.com",
+      "age": 16,
+      "courseIds": [
+        "2",
+        "3"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Hassan Mostafa",
+      "email": "hassan.mostafa10@example.com",
+      "age": 25,
+      "courseIds": [
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Dina Samy",
+      "email": "dina.samy11@example.com",
+      "age": 18,
+      "courseIds": [
+        "1"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Youssef Nabil",
+      "email": "youssef.nabil12@example.com",
+      "age": 20,
+      "courseIds": [
+        "3"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Farida Youssef",
+      "email": "farida.youssef13@example.com",
+      "age": 22,
+      "courseIds": [
+        "1",
+        "5"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Mariam Adel",
+      "email": "mariam.adel14@example.com",
+      "age": 19,
+      "courseIds": [
+        "2"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Islam Rami",
+      "email": "islam.rami15@example.com",
+      "age": 21,
+      "courseIds": [
+        "4"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Salma Ibrahim",
+      "email": "salma.ibrahim16@example.com",
+      "age": 17,
+      "courseIds": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Hazem Khalil",
+      "email": "hazem.khalil17@example.com",
+      "age": 23,
+      "courseIds": [
+        "5"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Reem Fathi",
+      "email": "reem.fathi18@example.com",
+      "age": 16,
+      "courseIds": [
+        "2",
+        "4"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Rana Tarek",
+      "email": "rana.tarek19@example.com",
+      "age": 24,
+      "courseIds": [
+        "3"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Mahmoud Sami",
+      "email": "mahmoud.sami20@example.com",
+      "age": 26,
+      "courseIds": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Noha Gamal",
+      "email": "noha.gamal21@example.com",
+      "age": 18,
+      "courseIds": [
+        "4"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Adham Ali",
+      "email": "adham.ali22@example.com",
+      "age": 20,
+      "courseIds": [
+        "5"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Salma Rashad",
+      "email": "salma.rashad23@example.com",
+      "age": 22,
+      "courseIds": [
+        "3"
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Yehia Hassan",
+      "email": "yehia.hassan24@example.com",
+      "age": 19,
+      "courseIds": [
+        "1"
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Asmaa Sobhy",
+      "email": "asmaa.sobhy25@example.com",
+      "age": 21,
+      "courseIds": [
+        "2",
+        "5"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Othman Ghassan",
+      "email": "othman.ghassan26@example.com",
+      "age": 17,
+      "courseIds": [
+        "4"
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Heba Nader",
+      "email": "heba.nader27@example.com",
+      "age": 23,
+      "courseIds": [
+        "1",
+        "3"
+      ]
+    },
+    {
+      "id": "28",
+      "name": "Walid Sherif",
+      "email": "walid.sherif28@example.com",
+      "age": 25,
+      "courseIds": [
+        "2"
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Maha Lotfy",
+      "email": "maha.lotfy29@example.com",
+      "age": 20,
+      "courseIds": [
+        "5"
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Taha Mostafa",
+      "email": "taha.mostafa30@example.com",
+      "age": 18,
+      "courseIds": [
+        "3",
+        "4"
       ]
     }
   ],
@@ -44,31 +289,31 @@
       "id": "1",
       "name": "Mathematics",
       "level": "Beginner",
-      "instructorId": 1
+      "instructorId": "1"
     },
     {
       "id": "2",
       "name": "Physics",
       "level": "Intermediate",
-      "instructorId": 2
+      "instructorId": "2"
     },
     {
       "id": "3",
       "name": "Chemistry",
       "level": "Beginner",
-      "instructorId": 3
+      "instructorId": "3"
     },
     {
       "id": "4",
       "name": "Biology",
       "level": "Beginner",
-      "instructorId": 4
+      "instructorId": "4"
     },
     {
       "id": "5",
       "name": "Computer Science",
       "level": "Advanced",
-      "instructorId": 3
+      "instructorId": "3"
     }
   ],
   "instructors": [
