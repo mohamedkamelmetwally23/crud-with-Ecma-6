@@ -3,8 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  /* خط عصري أكثر */
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -164,7 +163,9 @@ button:hover {
   border: 1px solid #ddd;
   border-radius: 6px;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 #studentFormModal input:focus {
@@ -213,9 +214,7 @@ button:hover {
   color: #444 !important;
   cursor: pointer;
   flex-grow: 1;
-
 }
-
 
 .modal-actions {
   display: flex;
@@ -236,4 +235,17 @@ button:hover {
   color: #fff;
   flex: 1;
   font-weight: bold;
+}
+a {
+  display: inline-block;
+  background-color: #007bff;
+  text-decoration: none;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
 }

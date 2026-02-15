@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./coursestyle.css" />
+  </head>
+  <body>
+    <a href="../index.html"">students</a>
+    <a href="courses.html"">courses</a>
+    <h1>Avilable courses</h1>
+    <button class="addcoursebtn">add course</button>
+    <table>
+      <thead>
+        <tr>
+          <th>course code</th>
+          <th>course name</th>
+          <th>instructor</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <div class="coursemodel">
+        <form>
+          <h3>add new course</h3>
+          <label for="coursename">course name</label>
+          <input type="text" id="coursename" />
+          <label for="instructorname">instructor name</label>
+          <input type="text" id="instructorname" />
+          <input type="button" class="addbtn" value="add" />
+          <input type="button" class="cancelbtn" value="cancel" />
+        </form>
+      </div>
+      <tbody class="tableData"></tbody>
+    </table>
+    <script src="../modules/courses.js" type="module"></script>
+  </body>
+</html>
